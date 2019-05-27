@@ -1,14 +1,109 @@
 <ion-header>
+
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="text-align: center" size = "200%">
+      <b>Michael Casey</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div class = "ion-padding">
+      <ion-avatar class = "avatar">
+          <img src="https://scontent.fopo2-1.fna.fbcdn.net/v/t1.0-1/p320x320/53817047_587622905069951_2038057819852242944_n.jpg?_nc_cat=109&_nc_ht=scontent.fopo2-1.fna&oh=d2b5c73a38f7016ea7826695c2787907&oe=5D563CFA">
+        </ion-avatar>
   </div>
+  
+  <ion-list>
+    <ion-item>
+        <ion-label color="primary">Date of Birth</ion-label>
+        <ion-datetime
+          displayFormat = "MM/DD/YYYY"
+          [(ngModel)]="myDateOfBirth"
+        ></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label color="secondary">University</ion-label>
+         WashU
+    </ion-item>
+    <ion-item>
+        <ion-label color="tertiary">Studies</ion-label>
+        Computer Science
+    </ion-item>
+  </ion-list>
+ 
+  <div class = "ion-padding">
+    <h2>More About Me</h2>
+        Hello! My name is Michael Casey, and I currently live in San Francisco,
+        but I used to live in Seattle and San Antonio. I just finished
+        my first year at WashU, where I am studying Computer Science and
+        Chemical Engineering. I know that sounds like a lot of STEM, but I
+        promise you that I have interests outside of math and science.
+        
+        I enjoy reading books, making art, and spending 
+        time with family and friends whenever possible. I am always up to 
+        go to a museum, and I am up for adventure, whether that's trying
+        an unfamiliar dish at a restaurant, going on a hike, or some other
+        exciting activity.
+  </div>
+  <div class = "ion-padding-bottom ion-padding-start ion-padding-end">
+    <h2>My Interests</h2>
+    <ion-chip color="primary" outline>
+        <ion-label>Art</ion-label>
+        <ion-icon name="brush"></ion-icon>
+    </ion-chip>
+    <ion-chip color="secondary">
+        <ion-label>Travel</ion-label>
+        <ion-icon name="car"></ion-icon>
+    </ion-chip>
+    <ion-chip color="tertiary" outline>
+        <ion-label >Reading</ion-label>
+        <ion-icon name = "book"></ion-icon>
+    </ion-chip>
+    <ion-chip color="primary">
+        <ion-label >Eating</ion-label>
+        <ion-icon name = "pizza"></ion-icon>
+    </ion-chip>
+    <ion-chip color="secondary" outline>
+        <ion-label>Tennis</ion-label>
+        <ion-icon name = "tennisball"></ion-icon>
+    </ion-chip>
+    <ion-chip color="tertiary">
+        <ion-label>Movies</ion-label>
+        <ion-icon name = "videocam"></ion-icon>
+    </ion-chip>
+  </div>
+
+  <div class = "ion-padding-bottom ion-padding-start ion-padding-end">
+    <h2>Some Questions</h2>
+    <ion-label>Do you like Lisbon so far?</ion-label>
+    <ion-list>
+      <ion-item>
+          <ion-checkbox stacked color = "success" slot="end"></ion-checkbox>
+          <ion-label>Yes</ion-label>
+      </ion-item>
+      <ion-item>
+          <ion-checkbox stacked color = "danger" slot="end"></ion-checkbox>
+          <ion-label>No</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-label>Where do you want to go in Lisbon while you're here?</ion-label>
+    <ion-list>
+      <ion-item>
+          <ion-label>Sintra</ion-label>
+          <ion-radio stacked color ="primary"></ion-radio>
+      </ion-item>
+      <ion-item>
+          <ion-label>Tower de Belém</ion-label>
+          <ion-radio stacked color ="secondary"></ion-radio>
+      </ion-item>
+      <ion-item>
+          <ion-label>LX Factory</ion-label>
+         <ion-radio stacked color ="tertiary"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+  <ion-button expand="full" color = "primary" (click)="pressMe()">Thank You</ion-button>
+  <ion-button expand="full" color = "secondary" (click)="presentToastWithOptions()">Favorite Me</ion-button>
+  <ion-button expand="full" color = "tertiary" (click)="presentAlertMultipleButtons()">Dislike Me</ion-button>
 </ion-content>
